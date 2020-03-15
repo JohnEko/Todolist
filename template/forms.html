@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+    <form action="{% url 'update' %}" method="POST">{% csrf_token %}
+        <input type="text" name="name" id="name"/>
+        
+        <label for="texts">Text</label>
+        <input type="Submit" value = "submit" />
+      </form>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <div class="row centered-form center-block">
+    <div class="container col-md-10 col-md-offset-1">
+      <h1>TodoList</h1><hr>
+     
+            <ul>
+              {% for mena in todos %}
+              <li> <a href="/todo_list/about_view/{{mena.id}}">{{mena.name}}</a> - <a href="{% url 'delete' mena.id %}">Delete</a></li> 
+              {% endfor %}
+            </ul>
+           
+       
+      </div>
+  </div>
+</html>
+ 
+ 
+
+
+
+
+        
