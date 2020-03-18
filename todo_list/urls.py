@@ -6,7 +6,7 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.todo_view, name='Home'),
-    url(r'^about_view/(?P<id>\w{0,50})/$', views.about_view, name='about'),
+    url(r'^about_view/(?P<id>\d+)/$', views.about_view, name='about'),
     url(r'^update/', views.update, name='update'),
     url(r'^deleteTodo/(?P<id>\d+)/$', views.deleteTodo, name='delete'),
      #url(r'^deleteTodo/', views.deleteTodo, name='delete'),

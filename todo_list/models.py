@@ -5,6 +5,7 @@ from __future__ import unicode_literals
 from django.db import models
 #from django.core.urlresolvers import reverse
 from django.utils import timezone
+from django.urls import reverse
 
 # Create your models here.
 class Todo(models.Model):
@@ -16,6 +17,6 @@ class Todo(models.Model):
     def __str__(self):
         return self.name
     
-    #def get_absolute_url(self):
-     #   return reverse("todo_list:about", kwargs={"id" : self.id})
+    def get_absolute_url(self):
+        return reverse("delete", args=[self.id])
 
